@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <title>온라인싸인 - 회원가입</title>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo sign">
+                <img src="images/logo2-1.png" alt="">
+            </div>
+        </header>
+            <div>
+                <div class="sign-up-area">
+                    <h1>회원가입</h1>
+                    <span>이름</span><input type="text" placeholder="이름을 입력해 주세요.">
+                    <span>이메일</span><input type="email" placeholder="이메일 주소를 입력해 주세요.">
+                    <span>비밀번호</span><input type="password" placeholder="영문/숫자/특수문자 조합 8~15자">
+                    <div class="checkbox-area">
+                        <div>
+                            <input type="checkbox" name="" id="allCheck">
+                            <label for="allCheck"></label><span>전체동의</span>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="checkbox">
+                            <label for="checkbox"></label><span>이용약관, 개인정보처리방침에 동의합니다. <strong class="txtred">(필수)</strong></span>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="checkbox2">
+                            <label for="checkbox2"></label><span>마케팅 정보 수신에 동의합니다. <strong>(선택)</strong></span>
+                        </div>
+                    </div>
+                    <button class="btn_1 sign-up_btn">회원가입</button>
+                </div>
+                <div class="sns-login">
+                    <h1>SNS계정 로그인</h1>
+                    <div class="btn-area">
+                        <button class="naver_btn"><img src="images/naver.png" alt=""><span>NAVER</span></button><button class="kakao_btn"><img src="images/kakao.png" alt=""><span>KAKAO</span></button>
+                    </div>
+                    <div class="btn-area">
+                        <button class="facebook_btn"><img src="images/facebook.png" alt=""><span>페이스북</span></button><button class="google_btn"><img src="images/google.png" alt=""><span>구글</span></button>
+                    </div>
+                </div>
+                <div class="go-login">
+                    <div class="help-area2">
+                        <a href="login.html">이미 계정이 있으신가요?</a>
+                    </div>
+                    <div class="login btn_1">
+                        <a href="login.html">로그인 바로가기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <footer>
+        <div class="type1">
+            Copyright © 2019 OnlineSign All Rights Reserved.
+        </div>
+    </footer>
+</body>
+<script>
+$(function(){ 
+    $("#allCheck").click(function(){ 
+    if($("#allCheck").prop("checked")) {
+    $("input[type=checkbox]").prop("checked",true);} 
+    else { $("input[type=checkbox]").prop("checked",false); } }) });
+</script>
+</html>
